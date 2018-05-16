@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Alquiler here.
+ * clase alquiler controla los alquileres de barcos y numero de dias que estan
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Lorena y Omar) 
+ * @version (9.5.18)
  */
 public class Alquiler
 {
@@ -22,31 +22,25 @@ public class Alquiler
         this.numDias = numDias;
     }
 
-   
-
     /**
      * devuelve el precio calculado segun el tipo de barco
      * 
-     * @return     precio del Alquiler
+     * @return  precio del Alquiler
      */
-    public int getPrecio()
+    public double getPrecio()
     {
-        int aDevolver;
-
-        return aDevolver;
+        return (numDias * (barco.getEslora() * MULTIPLICADORESLORA)) + PRECIOBASE * barco.getBernua();
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y
+     * devuelve la informacion de la clase alquiler
+     * 
+     * @return  aDevolver devuelve un String con la informacion del alquiler
      */
     public String toString()
     {
         String aDevolver = numDias + " Dias";        
         aDevolver += barco;//llama a to String barco;
-
         return aDevolver;       
     }
 
